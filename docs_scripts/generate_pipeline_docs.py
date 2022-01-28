@@ -77,6 +77,8 @@ def parse_bids_app(path, output_dir):
 
         f.write(f'{metadata["description"]}\n\n')
 
+        f.write("## Test\n" * 10)
+
         f.write("## Info\n")
         tbl_info = MarkdownTable(f, "Key", "Value")
         if "version" in metadata:

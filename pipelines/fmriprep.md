@@ -1,6 +1,6 @@
 ---
-source_file: australianimagingservice/mri/neuro/mrtrix3_connectome.py
-title: mrtrix_connectome
+source_file: australianimagingservice/mri/neuro/fmriprep.py
+title: fmriprep
 weight: 10
 
 ---
@@ -16,11 +16,10 @@ weight: 10
 ## Test
 ## Test
 ## Test
-## Test
 ## Info
 |Key|Value|
 |---|-----|
-|Version|0.1.4|
+|Version|0.1|
 |App version||
 |Image|`:`|
 |Maintainer|thomas.close@sydney.edu.au|
@@ -31,12 +30,14 @@ weight: 10
 |Name|Bids path|Data type|
 |----|---------|---------|
 |`T1w`|`anat/T1w`|`niftix_gz`|
+|`T2w`|`anat/T2w`|`niftix_gz`|
+|`fMRI`|`func/bold`|`niftix_gz`|
 |`dMRI`|`dwi/dwi`|`niftix_gz`|
 
 ## Outputs
 |Name|Data type|
 |----|---------|
-|`mrtrix_connectome`|`directory`|
+|`fmriprep`|`directory`|
 
 ## Parameters
 None

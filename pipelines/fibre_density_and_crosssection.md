@@ -1,13 +1,12 @@
 ---
-source_file: australianimagingservice/mri/neuro/fmriprep.py
-title: fmriprep
+source_file: australianimagingservice/mri/neuro/fibre_density_and_crosssection.py
+title: fibre_density_and_crosssection
 weight: 10
 
 ---
 
 
 
-## Test
 ## Test
 ## Test
 ## Test
@@ -38,7 +37,7 @@ weight: 10
 ## Outputs
 |Name|Data type|
 |----|---------|
-|`fmriprep`|`directory`|
+|`fibre_density_and_cross_section`|`directory`|
 
 ## Parameters
 None

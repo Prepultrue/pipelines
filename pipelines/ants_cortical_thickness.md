@@ -1,13 +1,12 @@
 ---
-source_file: australianimagingservice/mri/neuro/mriqc.py
-title: mriqc
+source_file: australianimagingservice/mri/neuro/ants_cortical_thickness.py
+title: ants_cortical_thickness
 weight: 10
 
 ---
 
-MRIQC extracts no-reference IQMs (image quality metrics) from structural (T1w and T2w) and functional MRI (magnetic resonance imaging) data.
 
-## Test
+
 ## Test
 ## Test
 ## Test
@@ -20,11 +19,11 @@ MRIQC extracts no-reference IQMs (image quality metrics) from structural (T1w an
 ## Info
 |Key|Value|
 |---|-----|
-|Version|0.1.5|
-|App version|0.16.1|
-|Image|`poldracklab/mriqc:0.16.1`|
+|Version|0.1|
+|App version||
+|Image|`:`|
 |Maintainer|thomas.close@sydney.edu.au|
-|Info URL|http://mriqc.readthedocs.io|
+|Info URL||
 |Frequency|Session|
 
 ## Inputs
@@ -33,11 +32,12 @@ MRIQC extracts no-reference IQMs (image quality metrics) from structural (T1w an
 |`T1w`|`anat/T1w`|`niftix_gz`|
 |`T2w`|`anat/T2w`|`niftix_gz`|
 |`fMRI`|`func/bold`|`niftix_gz`|
+|`dMRI`|`dwi/dwi`|`niftix_gz`|
 
 ## Outputs
 |Name|Data type|
 |----|---------|
-|`mriqc`|`directory`|
+|`ants_cortical_thickness`|`directory`|
 
 ## Parameters
 None

@@ -1,13 +1,12 @@
 ---
-source_file: australianimagingservice/mri/neuro/ants_cortical_thickness.py
-title: ants_cortical_thickness
+source_file: australianimagingservice/mri/neuro/freesurfer.py
+title: freesurfer
 weight: 10
 
 ---
 
 
 
-## Test
 ## Test
 ## Test
 ## Test
@@ -32,13 +31,11 @@ weight: 10
 |----|---------|---------|
 |`T1w`|`anat/T1w`|`niftix_gz`|
 |`T2w`|`anat/T2w`|`niftix_gz`|
-|`fMRI`|`func/bold`|`niftix_gz`|
-|`dMRI`|`dwi/dwi`|`niftix_gz`|
 
 ## Outputs
 |Name|Data type|
 |----|---------|
-|`ants_cortical_thickness`|`directory`|
+|`freesurfer`|`directory`|
 
 ## Parameters
 None

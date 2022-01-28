@@ -1,13 +1,12 @@
 ---
-source_file: australianimagingservice/mri/neuro/freesurfer.py
-title: freesurfer
+source_file: australianimagingservice/mri/neuro/mriqc.py
+title: mriqc
 weight: 10
 
 ---
 
+MRIQC extracts no-reference IQMs (image quality metrics) from structural (T1w and T2w) and functional MRI (magnetic resonance imaging) data.
 
-
-## Test
 ## Test
 ## Test
 ## Test
@@ -20,11 +19,11 @@ weight: 10
 ## Info
 |Key|Value|
 |---|-----|
-|Version|0.1|
-|App version||
-|Image|`:`|
+|Version|0.1.5|
+|App version|0.16.1|
+|Image|`poldracklab/mriqc:0.16.1`|
 |Maintainer|thomas.close@sydney.edu.au|
-|Info URL||
+|Info URL|http://mriqc.readthedocs.io|
 |Frequency|Session|
 
 ## Inputs
@@ -32,11 +31,12 @@ weight: 10
 |----|---------|---------|
 |`T1w`|`anat/T1w`|`niftix_gz`|
 |`T2w`|`anat/T2w`|`niftix_gz`|
+|`fMRI`|`func/bold`|`niftix_gz`|
 
 ## Outputs
 |Name|Data type|
 |----|---------|
-|`freesurfer`|`directory`|
+|`mriqc`|`directory`|
 
 ## Parameters
 None

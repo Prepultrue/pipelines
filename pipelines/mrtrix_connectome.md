@@ -1,6 +1,6 @@
 ---
-source_file: australianimagingservice/mri/neuro/fibre_density_and_crosssection.py
-title: fibre_density_and_crosssection
+source_file: australianimagingservice/mri/neuro/mrtrix3_connectome.py
+title: mrtrix_connectome
 weight: 10
 
 ---
@@ -16,11 +16,10 @@ weight: 10
 ## Test
 ## Test
 ## Test
-## Test
 ## Info
 |Key|Value|
 |---|-----|
-|Version|0.1|
+|Version|0.1.4|
 |App version||
 |Image|`:`|
 |Maintainer|thomas.close@sydney.edu.au|
@@ -31,14 +30,12 @@ weight: 10
 |Name|Bids path|Data type|
 |----|---------|---------|
 |`T1w`|`anat/T1w`|`niftix_gz`|
-|`T2w`|`anat/T2w`|`niftix_gz`|
-|`fMRI`|`func/bold`|`niftix_gz`|
 |`dMRI`|`dwi/dwi`|`niftix_gz`|
 
 ## Outputs
 |Name|Data type|
 |----|---------|
-|`fibre_density_and_cross_section`|`directory`|
+|`mrtrix_connectome`|`directory`|
 
 ## Parameters
 None

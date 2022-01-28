@@ -1,21 +1,12 @@
 ---
-source_file: australianimagingservice/mri/neuro/fibre_density_and_crosssection.py
-title: fibre_density_and_crosssection
+source_file: australianimagingservice/mri/neuro/ants_cortical_thickness.py
+title: ants_cortical_thickness
 weight: 10
 
 ---
 
 
 
-## Test
-## Test
-## Test
-## Test
-## Test
-## Test
-## Test
-## Test
-## Test
 ## Info
 |Key|Value|
 |---|-----|
@@ -37,7 +28,7 @@ weight: 10
 ## Outputs
 |Name|Data type|
 |----|---------|
-|`fibre_density_and_cross_section`|`directory`|
+|`ants_cortical_thickness`|`directory`|
 
 ## Parameters
 None

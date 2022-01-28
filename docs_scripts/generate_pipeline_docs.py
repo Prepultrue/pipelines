@@ -77,7 +77,7 @@ def parse_bids_app(path, output_dir):
 
         f.write(f'{metadata["description"]}\n\n')
 
-        f.write("## Info\n")
+        f.write("### Info\n")
         tbl_info = MarkdownTable(f, "Key", "Value")
         if "version" in metadata:
             tbl_info.write_row("Version", metadata["version"])
@@ -96,21 +96,21 @@ def parse_bids_app(path, output_dir):
 
         f.write("\n")
 
-        f.write("## Inputs\n")
+        f.write("### Inputs\n")
         tbl_inputs = MarkdownTable(f, "Name", "Bids path", "Data type")
         for x in task.inputs:
             name, dtype, path = x
             tbl_inputs.write_row(escaped(name), escaped(path), escaped(dtype))
         f.write("\n")
 
-        f.write("## Outputs\n")
+        f.write("### Outputs\n")
         tbl_outputs = MarkdownTable(f, "Name", "Data type")
         for x in task.outputs:
             name, dtype, path = x
             tbl_outputs.write_row(escaped(name), escaped(dtype))
         f.write("\n")
 
-        f.write("## Parameters\n")
+        f.write("### Parameters\n")
         if not metadata.get("parameters", None):
             f.write("None\n")
         else:

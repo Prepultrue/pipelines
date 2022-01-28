@@ -7,7 +7,7 @@ weight: 10
 
 
 
-## Info
+### Info
 |Key|Value|
 |---|-----|
 |Version|0.1|
@@ -17,17 +17,17 @@ weight: 10
 |Info URL||
 |Frequency|Session|
 
-## Inputs
+### Inputs
 |Name|Bids path|Data type|
 |----|---------|---------|
 |`T1w`|`anat/T1w`|`niftix_gz`|
 |`T2w`|`anat/T2w`|`niftix_gz`|
 
-## Outputs
+### Outputs
 |Name|Data type|
 |----|---------|
 |`freesurfer`|`directory`|
 
-## Parameters
+### Parameters
 None
 

@@ -7,7 +7,7 @@ weight: 10
 
 
 
-## Info
+### Info
 |Key|Value|
 |---|-----|
 |Version|0.1|
@@ -17,7 +17,7 @@ weight: 10
 |Info URL||
 |Frequency|Session|
 
-## Inputs
+### Inputs
 |Name|Bids path|Data type|
 |----|---------|---------|
 |`T1w`|`anat/T1w`|`niftix_gz`|
@@ -25,11 +25,11 @@ weight: 10
 |`fMRI`|`func/bold`|`niftix_gz`|
 |`dMRI`|`dwi/dwi`|`niftix_gz`|
 
-## Outputs
+### Outputs
 |Name|Data type|
 |----|---------|
 |`fmriprep`|`directory`|
 
-## Parameters
+### Parameters
 None
 

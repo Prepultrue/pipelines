@@ -1,3 +1,1 @@
-arcana>=2.0.0.dev1
-docker>=5.0.2
-click
+arcana @ git+https://github.com/Australian-Imaging-Service/arcana@main

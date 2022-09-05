@@ -1,0 +1,54 @@
+pkg_version: &pkg_version "0.9.1"
+wrapper_version: "1"
+authors:
+  - mahdieh.dashtbanimoghari@sydney.edu.au
+base_image: !join ["nipreps/smriprep:", *pkg_version]
+info_url: "https://www.nipreps.org/smriprep/master/index.html"
+package_manager: apt
+system_packages:
+python_packages: # Copy in local copies of pydra and pydra-dcm2niix
+  - name: pydra
+  - name: pydra-dcm2niix
+package_templates: # neurodocker template--fs and fsl is already in smriprep image
+  - name: dcm2niix
+    version: v1.0.20201102
+licenses:
+  - source: freesurfer.txt
+    destination: /opt/freesurfer/license.txt # where in the docker image it should be installed
+commands:
+  - name: smriprep # shows up in xnat
+    version: 1a1
+    pydra_task: arcana.tasks.bids:bids_app
+    description: "SMRIPrep: a structural MRI data preprocessing pipeline"
+    long_description: |
+      "SMRIPrep: a structural MRI data preprocessing pipeline..."
+    inputs: &inputs
+      - name: T1w
+        path: anat/T1w
+        format: medimage:NiftiGzX
+        stored_format: medimage:Dicom
+        description: "T1-weighted anatomical scan"
+      - name: T2w
+        path: anat/T2w
+        format: medimage:NiftiGzX
+        stored_format: medimage:Dicom
+        description: "T2-weighted anatomical scan"
+    outputs: &outputs
+      - name: smriprep
+        format: common:Directory
+    parameters:
+      - name: smriprep_flags
+        pydra_field: flags #look at app.py =>id, flag, json edit are the input to wf
+        type: string
+      - name: json_edits
+        pydra_field: json_edits
+        type: string
+    row_frequency: session
+    configuration:
+      name: smriprep
+      inputs: *inputs
+      outputs: *outputs
+      executable: /opt/conda/bin/smriprep
+      dataset: /work/bids-dataset
+      app_output_dir: /work/bids-app-output
+      app_work_dir: /work/nipype-work  # We need to give a work directory outside of the pydra node as otherwise the file paths exceed Freesurfer's file-path char buffers
